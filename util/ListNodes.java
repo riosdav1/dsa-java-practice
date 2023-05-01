@@ -16,7 +16,7 @@ public class ListNodes {
         return list.toString();
     }
 
-    public static ListNode asList(int... values) {
+    public static ListNode valuesToList(int... values) {
         ListNode head = null;
         // {1} -> {2} -> {3} -> ...
         for (int i = values.length - 1; i > -1; i--) {
@@ -25,7 +25,7 @@ public class ListNodes {
         return head;
     }
 
-    public static ListNode asList(int size) {
+    public static ListNode sizeToList(int size) {
         ListNode head = null;
         // {1} -> {2} -> {3} -> ...
         for (int i = size; i > 0; i--) {

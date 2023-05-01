@@ -1,13 +1,13 @@
 import entity.ListNode;
 import util.ListNodes;
-import static util.ListNodes.asList;
+import static util.ListNodes.valuesToList;
 
 public class MergeSortedLists {
     public static void main(String[] args) {
-        System.out.println(ListNodes.toString(mergeTwoLists(asList(1, 2, 4), asList(1, 3, 4)))); // [1,1,2,3,4,4]
-        System.out.println(ListNodes.toString(mergeTwoLists(asList(), asList()))); // []
-        System.out.println(ListNodes.toString(mergeTwoLists(asList(), asList(0)))); // [0]
-        System.out.println(ListNodes.toString(mergeTwoLists(asList(1), asList(2)))); // [1,2]
+        System.out.println(ListNodes.toString(mergeTwoLists(valuesToList(1, 2, 4), valuesToList(1, 3, 4)))); // [1,1,2,3,4,4]
+        System.out.println(ListNodes.toString(mergeTwoLists(valuesToList(), valuesToList()))); // []
+        System.out.println(ListNodes.toString(mergeTwoLists(valuesToList(), valuesToList(0)))); // [0]
+        System.out.println(ListNodes.toString(mergeTwoLists(valuesToList(1), valuesToList(2)))); // [1,2]
     }
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
