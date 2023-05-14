@@ -3,34 +3,32 @@ package util;
 import java.util.ArrayList;
 import java.util.List;
 
-import entity.ListNode;
+import datastructs.linkedlist.LinkedList;
 
 public class ListNodes {
 
-    public static String toString(ListNode head) {
+    public static String toString(LinkedList<Integer> head) {
         List<Integer> list = new ArrayList<>();
         while (head != null) {
-            list.add(head.val);
-            head = head.next;
+            list.add(head.getData());
+            head = head.next();
         }
         return list.toString();
     }
 
-    public static ListNode valuesToList(int... values) {
-        ListNode head = null;
-        // {1} -> {2} -> {3} -> ...
-        for (int i = values.length - 1; i > -1; i--) {
-            head = new ListNode(values[i], head);
-        }
-        return head;
+    public static LinkedList<Integer> valuesToList(int... values) {
+		LinkedList<Integer> list = new LinkedList<>(0);
+		for (int i = 0; i < values.length; i++) {
+			list.add(values[i]);
+		}
+        return list.next();
     }
 
-    public static ListNode sizeToList(int size) {
-        ListNode head = null;
-        // {1} -> {2} -> {3} -> ...
-        for (int i = size; i > 0; i--) {
-            head = new ListNode(i, head);
+    public static LinkedList<Integer> sizeToList(int size) {
+		LinkedList<Integer> list = new LinkedList<>(1);
+        for (int i = 2; i <= size; i++) {
+        	list.add(i);
         }
-        return head;
+        return list;
     }
 }
