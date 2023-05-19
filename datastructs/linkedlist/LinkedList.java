@@ -54,6 +54,10 @@ public class LinkedList<E> {
 	public E getData() {
 		return this.data;
 	}
+	
+	public void setData(E data) {
+		this.data = data;
+	}
 
 	public LinkedList<E> next() {
 		return this._next;

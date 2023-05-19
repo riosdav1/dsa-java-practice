@@ -18,6 +18,10 @@ public class Isomorphic {
     }
 
     private static boolean isIsomorphic(String s, String t) {
+    	if (s == null || t == null || s.length() != t.length()) {
+    		return false;
+    	}
+    	
         int[] sourceChars = new int[256];
         Arrays.fill(sourceChars, -1);
 
